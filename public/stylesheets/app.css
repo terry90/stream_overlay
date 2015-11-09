@@ -8,3 +8,10 @@ body.green {
     font-weight: bold;
     font-size: 26px;
 }
+
+.break-time {
+    width: 100%;
+    font-size: 32px;
+    margin: auto;
+    text-align: center;
+}

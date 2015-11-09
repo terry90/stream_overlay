@@ -1,11 +1,12 @@
 <body class="green">
   <div class="items">
-    <div id="current_task" class="current-task">Current task: <%= @items[:current_task] %></div>
+    Current task: <div id="current_task" class="current-task"><%= @items[:current_task] %></div>
 
     <div id="break_time" class="break-time">
       <%= @items[:break_time] || '' %>
-      <% if @items[:break_time] %> <span id="break-time-min">x</span> minute(s)<% end %>
+      <% if @items[:break_time] %><% end %>
     </div>
+    <!--<div class="break-time-min">10</div> minute(s)-->
 
     <div class="afk"><%= @items[:afk] || '' %></div>
   </div>
