@@ -1,0 +1,9 @@
+body {
+    background-color: rgb(0, 255, 0);
+}
+
+.items {
+    color: white;
+    font-weight: bold;
+    font-size: 22px;
+}
