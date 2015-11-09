@@ -10,6 +10,10 @@ configure do
   set :views, 'app/views'
 end
 
+after do
+  ActiveRecord::Base.connection.close
+end
+
 Dir[File.join(File.dirname(__FILE__), 'app', '**', '*.rb')].each do |file|
   require file
   also_reload file
@@ -24,6 +28,16 @@ get '/' do
 end
 
 get '/admin' do
-  @items = Item.all
+  @ids = Item.pluck(:html_identifier)
   erb :admin
+end
+
+post '/admin' do
+  identifiers = Item.all.pluck(:html_identifier)
+  if identifiers.include?(params[:item])
+    i = Item.find_by(html_identifier: params[:item])
+    i.content = params[:content]
+    i.save
+  end
+  redirect '/'
 end

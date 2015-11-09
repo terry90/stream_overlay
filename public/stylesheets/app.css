@@ -1,9 +1,10 @@
-body {
+body.green {
     background-color: rgb(0, 255, 0);
 }
 
 .items {
+    text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
     color: white;
     font-weight: bold;
-    font-size: 22px;
+    font-size: 26px;
 }

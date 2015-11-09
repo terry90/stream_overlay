@@ -1,7 +1,12 @@
-<div class="items">
-<div class="current-task">Current task: <%= @items[:current_task] %></div>
+<body class="green">
+  <div class="items">
+    <div class="current-task">Current task: <%= @items[:current_task] %></div>
 
-<div class="break-time"><%= @items[:break_time] || '' %><% if @items[:break_time] %> <span id="break-time-min">x</span> minute(s)<% end %></div>
+    <div class="break-time">
+      <%= @items[:break_time] || '' %>
+      <% if @items[:break_time] %> <span id="break-time-min">x</span> minute(s)<% end %>
+    </div>
 
-<div class="afk"><%= @items[:afk] || '' %></div>
-</div>
+    <div class="afk"><%= @items[:afk] || '' %></div>
+  </div>
+</body>

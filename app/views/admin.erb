@@ -1,0 +1,11 @@
+<body>
+<form action="/admin" method="post">
+  <select name="item">
+    <% @ids.each do |i| %>
+    <option><%= i %></option>
+    <% end %>
+  </select>
+  <label for="content">Content:</label>
+  <input type="text" name="content" id="content">
+</form>
+</body>
