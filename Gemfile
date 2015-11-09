@@ -6,6 +6,7 @@ gem 'sinatra'
 gem 'sinatra-activerecord'
 gem 'sinatra-contrib'
 gem 'foreman'
+gem 'json'
 
 group :test, :development do
   gem 'capybara'

@@ -1,3 +1,4 @@
+require 'json'
 require 'sinatra'
 require 'sinatra/activerecord'
 require 'sinatra/reloader'
@@ -45,7 +46,10 @@ end
 get '/items' do
   @items = []
   Item.find_each do |i|
-    @items << {i.html_identifier => i.content}
+    @items << {
+      html_identifier: i.html_identifier,
+      content: i.content
+    }
   end
-  @items.to_s
+  @items.to_json
 end

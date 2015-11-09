@@ -91,6 +91,7 @@ PLATFORMS
 DEPENDENCIES
   capybara
   foreman
+  json
   pg
   pry
   rake
