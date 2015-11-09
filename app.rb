@@ -39,5 +39,13 @@ post '/admin' do
     i.content = params[:content]
     i.save
   end
-  redirect '/'
+  redirect '/admin'
+end
+
+get '/items' do
+  @items = []
+  Item.find_each do |i|
+    @items << {i.html_identifier => i.content}
+  end
+  @items.to_s
 end
